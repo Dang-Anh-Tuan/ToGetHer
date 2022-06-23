@@ -198,6 +198,7 @@ export default defineComponent({
 
 .question {
   font-size: 2.4rem;
+  line-height: 2.8rem;
 }
 
 .btn-disabled {
