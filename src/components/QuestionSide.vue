@@ -119,7 +119,6 @@ export default defineComponent({
   font-size: 1.6rem;
   position: absolute;
   padding: 12px 16px;
-  top: 1px;
   right: 0;
   border-top-right-radius: 24px;
   border-bottom-right-radius: 24px;
@@ -172,11 +171,15 @@ export default defineComponent({
 
 @media only screen and (max-width: 1024px) {
   .container {
-    height: 300px;
+    height: 600px;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 0 8px 12px 8px;
+    height: 400px;
+  }
   .question-no,
   .question-content,
   .container-btn-remove {

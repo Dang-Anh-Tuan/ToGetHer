@@ -165,4 +165,16 @@ export default defineComponent({
     justify-content: space-between;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .question-side {
+    padding: 12px;
+  }
+  .container-home {
+    padding: 16px;
+  }
+  .btn-manage-question {
+    padding: 8px 12px;
+  }
+}
 </style>

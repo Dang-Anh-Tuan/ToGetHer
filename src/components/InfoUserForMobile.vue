@@ -72,7 +72,6 @@ export default {
   width: 50px;
   height: 100%;
   border-radius: 50%;
-
 }
 .avatar {
   height: 100%;
@@ -86,7 +85,6 @@ export default {
 .container-score-drink {
   display: flex;
   align-items: center;
-  margin-left: 12px;
 }
 
 .container-score-answer--reverse,
@@ -94,7 +92,6 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-right: 12px;
 }
 .container-icon {
   font-size: 2rem;
@@ -102,11 +99,45 @@ export default {
 
 .score-count {
   font-size: 1.6rem;
-  margin-left: 12px;
 }
 
 .score-count--reverse {
   font-size: 1.6rem;
-  margin-right: 12px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-score-answer,
+  .container-score-drink {
+    margin-left: 12px;
+  }
+
+  .score-count {
+    margin-left: 12px;
+  }
+  .score-count--reverse {
+    margin-right: 12px;
+  }
+  .container-score-answer--reverse,
+  .container-score-drink--reverse {
+    margin-right: 12px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-score-answer,
+  .container-score-drink {
+    margin-left: 6px;
+  }
+
+  .score-count {
+    margin-left: 6px;
+  }
+  .score-count--reverse {
+    margin-right: 6px;
+  }
+  .container-score-answer--reverse,
+  .container-score-drink--reverse {
+    margin-right: 6px;
+  }
 }
 </style>
