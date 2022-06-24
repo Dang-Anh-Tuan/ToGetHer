@@ -56,7 +56,7 @@ export default defineComponent({
       </div>
     </div>
 
-    <ul class="question-list">
+    <ul class="question-list formular-bg" >
       <li v-for="(question, index) in questionStore.questions" :key="index">
         <div
           class="container-question-item"
@@ -171,7 +171,7 @@ export default defineComponent({
 
 @media only screen and (max-width: 1024px) {
   .container {
-    height: 600px;
+    height: 300px;
   }
 }
 
