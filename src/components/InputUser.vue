@@ -38,7 +38,11 @@ export default defineComponent({
 <template>
   <div class="container-input-user">
     <div class="container-choose-avatar">
-      <div ref="preview" class="preview-avatar"></div>
+      <div ref="preview" class="preview-avatar">
+        <div class="icon-add-avatar">
+          <i class="icon-add fa-solid fa-circle-plus color--success"></i>
+        </div>
+      </div>
       <input
         type="file"
         class="input-avatar"
@@ -99,7 +103,7 @@ export default defineComponent({
 .input-name {
   margin-bottom: 12px;
   padding: 8px 12px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   border: 1px solid #f48846;
   border-radius: 8px;
 }
@@ -108,4 +112,24 @@ export default defineComponent({
   outline: none;
   box-shadow: 0px 0px 20px #f48846;
 }
+
+.icon-add-avatar {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon-add {
+  font-size: 3rem;
+}
+
+.container-choose-avatar:hover .icon-add-avatar {
+  display: flex;
+}
+
+
 </style>

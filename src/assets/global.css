@@ -27,6 +27,8 @@ body {
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(45deg, #f48846, #eab28f);
+  animation: CircleBounce 1.5s linear;
+  animation-iteration-count: infinite;
 }
 
 .color--success {
@@ -34,13 +36,39 @@ body {
 }
 
 .color--danger {
-  color : #ff3448;
+  color: #ff3448;
 }
 
 .color--violet {
   color: #b57bff;
 }
 
-.btn--disable-success{
-  opacity: 0.5;
+@keyframes CircleBounce {
+  0% {
+    margin-bottom: 0;
+  }
+  75% {
+    margin-bottom: 20px;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes CircleBounceBig {
+  0% {
+    top: -70px;
+  }
+  75% {
+    top: -90px;
+  }
+  100% {
+    top: -70px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .circle {
+    display: none;
+  }
 }

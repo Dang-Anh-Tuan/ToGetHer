@@ -39,11 +39,23 @@ export default defineComponent({
   <div class="container">
     <div
       class="circle"
-      style="width: 300px; height: 300px; top: -70px; right: -70px"
+      style="
+        width: 300px;
+        height: 300px;
+        top: -70px;
+        right: -70px;
+        animation: CircleBounceBig 1.5s linear 0.3s infinite;
+      "
     ></div>
     <div
       class="circle"
-      style="width: 100px; height: 100px; bottom: 30px; left: 30px"
+      style="
+        width: 100px;
+        height: 100px;
+        bottom: 30px;
+        left: 30px;
+        animation-delay: 0.2s;
+      "
     ></div>
     <div
       class="circle"
@@ -126,5 +138,38 @@ export default defineComponent({
 }
 .btn-start:active {
   top: 3px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    overflow-y: auto;
+    padding-bottom: 50px;
+  }
+  .box {
+    padding: 20px;
+    width: 700px;
+  }
+
+  .container-input-user > * {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    overflow-y: auto;
+  }
+  .box {
+    height: fit-content;
+    padding: 50px;
+    width: 700px;
+  }
+  .container-input-user {
+    flex-direction: column;
+  }
+
+  .container-input-user > * {
+    margin-top: 50px;
+  }
 }
 </style>

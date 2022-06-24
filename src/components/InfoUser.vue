@@ -7,6 +7,7 @@ export default defineComponent({
 
   props: {
     userParam: Object,
+    boxShadowColor: String,
   },
 
   setup() {
@@ -20,7 +21,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="container">
+  <div
+    class="container"
+    :style="'box-shadow: ' + boxShadowColor + ' 0px 5px 15px;'"
+  >
     <div
       class="container-avatar"
       :style="
@@ -60,7 +64,7 @@ export default defineComponent({
 <style scoped>
 .container {
   height: 80%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   border-radius: 24px;
   text-align: center;
 }

@@ -169,4 +169,21 @@ export default defineComponent({
 .remove-icon {
   font-size: 2rem;
 }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .question-no,
+  .question-content,
+  .container-btn-remove {
+    padding: 12px 16px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: 0.8px;
+  }
+}
 </style>

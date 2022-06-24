@@ -126,7 +126,6 @@ export default defineComponent({
 .wrapper {
   width: 350px;
   height: 400px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -204,5 +203,21 @@ export default defineComponent({
 .btn-disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 300px;
+  }
+
+  .container-btn-choose{
+    width: 100%;
+  }
 }
 </style>
