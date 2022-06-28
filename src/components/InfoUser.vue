@@ -41,23 +41,25 @@ export default defineComponent({
       ></div>
     </div>
     <p class="user-name">{{ userParam.username }}</p>
-    <ul class="score">
-      <li class="score-item">
-        <div class="container-icon">
-          <i class="score-icon fa-solid fa-circle-check color--success"></i>
-        </div>
-        <span class="separate"></span>
-        <p class="score-count">{{ userParam.scoreAnswer }}</p>
-      </li>
-      <li class="score-item">
-        <div class="container-icon">
-          <i class="score-icon fa-solid fa-martini-glass color--violet"></i>
-        </div>
-        <span class="separate"></span>
+    <div class="container-score">
+      <ul class="score">
+        <li class="score-item">
+          <div class="container-icon">
+            <i class="score-icon fa-solid fa-circle-check color--success"></i>
+          </div>
+          <span class="separate"></span>
+          <p class="score-count">{{ userParam.scoreAnswer }}</p>
+        </li>
+        <li class="score-item">
+          <div class="container-icon">
+            <i class="score-icon fa-solid fa-martini-glass color--violet"></i>
+          </div>
+          <span class="separate"></span>
 
-        <p class="score-count">{{ userParam.scoreDrink }}</p>
-      </li>
-    </ul>
+          <p class="score-count">{{ userParam.scoreDrink }}</p>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -99,6 +101,12 @@ export default defineComponent({
   text-transform: uppercase;
 }
 
+.container-score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .score {
   display: flex;
   flex-direction: column;
@@ -106,7 +114,6 @@ export default defineComponent({
   align-items: flex-start;
   height: 150px;
   margin-top: 20px;
-  padding: 50px 90px;
 }
 
 li:nth-child(n + 2) {
